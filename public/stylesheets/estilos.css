@@ -1,0 +1,58 @@
+header{
+	margin-bottom: 5em;
+}
+.logo{
+	margin-top: -0.3em;
+}
+.caja-busqueda{	background: black;}
+
+.nav-acerca{
+	display: block;
+}
+.cont-res/*conenenedor de los resultados por item*/
+{
+	width: 60%;
+	margin-bottom: 2em;
+}
+.boton{/*para elegir el semestre*/
+	background: blue;
+}
+.li-student{
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+}
+.li-teacher{margin-bottom: 1em;}
+
+.li-url{	margin-bottom: 2em;}
+
+.partial{
+	font-size: 1.5em;
+	color: #101010;
+}
+.text-margen{
+	margin-bottom: 0.5em;
+	margin-left: 1em;
+}
+.espacios{
+	margin-top:0.5em;
+	margin-bottom: 2em;
+}
+.comment-margen{
+	margin-top: 2em;
+}
+.contenedor-tab{
+	border-radius: 5px;
+	border-style: solid ;
+	    border: 2px solid #337AB7;
+}
+.product .img-responsive {
+    margin: 0 auto;
+}
+@media screen and (max-width: 768px){
+	header{	margin-bottom: 8em;}
+.cont-res/*conenenedor de los resultados por item*/
+	{width: 98%;}
+
+.nav-acerca{
+	display: none;
+}

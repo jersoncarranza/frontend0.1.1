@@ -1,0 +1,51 @@
+<h3 class="text-primary text-capitalize">{{file.subject}}</h3>
+<ul class="list-unstyled">
+  <li class="li-teacher"><small>{{file.description}}</small></li>
+</ul>
+
+
+<div class="col-xs-11 col-sm-10 col-md-10 col-lg-11">
+    <ul class="nav nav-pills nav-justified">
+      <li ng-class="{active : tab === 1}"><a ng-click="tab=1">Tarea</a></li>
+      <li ng-class="{active : tab === 2}"><a ng-click="tab=2">Pruebas</a></li>
+      <li ng-class="{active : tab === 3}"><a ng-click="tab=3">Materia</a></li>
+    </ul>
+    <div ng-init="tab=1" class="tab-content contenedor-tab">
+      
+      <div ng-show="tab === 1">
+         <div class="espacios" ng-repeat="homework in file.homework">
+         	<span class="partial"> Parcial{{homework.partial_n}}</span>
+			</br></br>
+         	<div ng-repeat="item in homework.homework_n">
+         		<p class="text-capitalize text-margen" >
+         		<a class="text-right" ng-href="//{{item.url}}"><i class="glyphicon glyphicon-circle-arrow-down"></i></a>
+         		  {{item.description}} 
+         		</p> 	
+         	</div>
+         </div>
+      </div>
+
+      <div ng-show="tab === 2">
+         <div class="espacios" ng-repeat="exam in file.exam" >
+	         <span class="partial"> Parcial {{exam.partial_n}}</span>
+	         </br></br>
+	         <p class="text-capitalize text-margen" >
+	         <a class="text-right" ng-href="//{{exam.url}}"><i class="glyphicon glyphicon-circle-arrow-down"></i></a>
+	         	{{exam.description}}</p> 	
+         </div> 
+      </div>  
+      <div ng-show="tab === 3">
+          <div class="espacios" ng-repeat="materia in file.materia">
+          	 <span class="partial"> Parcial {{materia.partial_n}}</span>
+          	 <br><br>
+          	 <div ng-repeat="item in materia.materia_n">
+          	 <p class="text-capitalize text-margen" > 
+          	 	<a class="text-right" ng-href="//{{item.url}}"><i class="glyphicon glyphicon-circle-arrow-down"></i></a>
+          	 	{{item.description}}
+          	 </p>
+          	 </div>
+          </div>
+      </div>
+
+   </div>
+</div>
