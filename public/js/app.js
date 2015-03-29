@@ -5,7 +5,7 @@ var MyApp = angular.module('MyApp', [
   'fileDirective'
 ]);
 
- MyApp.config(function($routeProvider) {
+ MyApp.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
           when('/', {
             templateUrl: 'file-list.html',
@@ -18,4 +18,4 @@ var MyApp = angular.module('MyApp', [
           otherwise({
             redirectTo: '/'
           });
-      });
+      }]);
