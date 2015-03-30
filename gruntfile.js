@@ -12,14 +12,14 @@ module.exports = function(grunt){
 	
 		concat: {
 		  dist: {
-				src: ['./public/js/vendor/angular-route.min.js','./public/js/vendor/angular.min.js','./public/js/vendor/bootstrap.min.js','./public/js/vendor/jquery-1.11.2.min.js'],
-				dest:'./public/js/vendor.js'
+				src: ['./public/js/fileControllers.js','./public/js/filesFactory.js','./public/js/fileDirective.js','./public/js/app.js'],
+				dest:'./public/js/unidos.js'
 			}
 		},
 		uglify:{
 		dist:{
-				src:'./public/js/vendor.js',
-				dest:'./public/js/vendor.min.js'
+				src:'./public/js/unidos.js',
+				dest:'./public/js/unidos.min.js'
 			}
 		}
 	
