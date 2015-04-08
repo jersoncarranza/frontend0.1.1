@@ -14,7 +14,7 @@
       
       <div ng-show="tab === 1">
          <div class="espacios" ng-repeat="homework in file.homework">
-         	<span class="partial"> Parcial {{homework.partial_n}}</span>
+         	<span class="partial">{{homework.partial_n}}</span>
 			</br></br>
          	<div ng-repeat="item in homework.homework_n">
          		<p class="text-capitalize text-margen" >
@@ -29,7 +29,7 @@
 
       <div ng-show="tab === 2">
          <div class="espacios" ng-repeat="exam in file.exam" >
-	         <span class="partial"> Parcial {{exam.partial_n}}</span>
+	         <span class="partial">{{exam.partial_n}}</span>
 	         </br></br>
 	         <p class="text-capitalize text-margen" >
 	         <a class="text-right" ng-href="{{exam.url}}">
@@ -40,7 +40,7 @@
       </div>  
       <div ng-show="tab === 3">
           <div class="espacios" ng-repeat="materia in file.materia">
-          	 <span class="partial"> Parcial {{materia.partial_n}}</span>
+          	 <span class="partial">{{materia.partial_n}}</span>
           	 <br><br>
           	 <div ng-repeat="item in materia.materia_n">
           	 <p class="text-capitalize text-margen" > 
